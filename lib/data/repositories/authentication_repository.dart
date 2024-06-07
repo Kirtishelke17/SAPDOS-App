@@ -3,10 +3,8 @@ import 'package:practice_work/data/models/appointment.dart';
 
 class AuthenticationRepository {
   Future<bool> login(String emailOrPhone, String password) async {
-    // Simulate network delay
     await Future.delayed(Duration(seconds: 2));
 
-    // Mock authentication logic
     if ((emailOrPhone == 'doctor@gmail.com' && password == '12345678') ||
         (emailOrPhone == 'patient@gmail.com' && password == '12345678')) {
       return true;
@@ -17,12 +15,8 @@ class AuthenticationRepository {
 
   Future<bool> signUp(
       String emailOrPhone, String password, String confirmPassword) async {
-    // Simulate network delay
     await Future.delayed(Duration(seconds: 2));
 
-    // Mock sign-up logic
-    // Here, you can add your logic to register a user
-    // For simplicity, this example just checks if password and confirmPassword match
     if (password == confirmPassword) {
       return true;
     } else {
@@ -46,7 +40,6 @@ class AuthenticationRepository {
         status: 'Completed',
         clockColor: Colors.green,
       ),
-      // Add more appointment data as needed
     ];
 
     return appointments;
